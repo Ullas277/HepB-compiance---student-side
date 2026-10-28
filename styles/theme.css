@@ -1,0 +1,163 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: var(--prism-font-size-16);
+  --background: var(--prism-page-bg);
+  --foreground: var(--prism-text-primary);
+  --card: var(--prism-surface);
+  --card-foreground: var(--prism-text-primary);
+  --popover: var(--prism-surface);
+  --popover-foreground: var(--prism-text-primary);
+  --primary: var(--prism-primary);
+  --primary-foreground: var(--fuse-white-500);
+  --secondary: var(--prism-surface-muted);
+  --secondary-foreground: var(--prism-text-primary);
+  --muted: var(--prism-surface-muted);
+  --muted-foreground: var(--prism-text-secondary);
+  --accent: var(--prism-primary-muted);
+  --accent-foreground: var(--prism-primary);
+  --destructive: var(--prism-status-danger-fill);
+  --destructive-foreground: var(--fuse-white-500);
+  --border: var(--prism-border);
+  --input: transparent;
+  --input-background: var(--prism-surface-muted);
+  --switch-background: var(--fuse-navy-200);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: var(--fuse-navy-200);
+  --chart-1: var(--prism-primary);
+  --chart-2: var(--prism-brand-cyan);
+  --chart-3: var(--prism-status-success-solid);
+  --chart-4: var(--prism-status-amber-solid);
+  --chart-5: var(--prism-brand-purple);
+  --radius: var(--prism-radius-control);
+  --sidebar: var(--fuse-navy-700);
+  --sidebar-foreground: var(--fuse-white-500);
+  --sidebar-primary: var(--prism-primary);
+  --sidebar-primary-foreground: var(--fuse-white-500);
+  --sidebar-accent: var(--fuse-navy-800);
+  --sidebar-accent-foreground: var(--fuse-white-500);
+  --sidebar-border: var(--fuse-navy-600);
+  --sidebar-ring: var(--prism-primary-ring);
+}
+
+/* Dark-mode variables are fully controlled by html.theme-*-dark in prism-theme-modes.css.
+   The .dark class presence is used only as a Tailwind dark: variant hook. */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply text-foreground;
+    background-color: var(--prism-page-bg);
+    font-family: var(--prism-font-family);
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+    background-color: var(--prism-page-bg);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  /* Normalize Figma-exported font classes to actual Source Sans Pro. */
+  [class*="font-['Source_Sans_Pro"] {
+    font-family: "Source Sans Pro", sans-serif !important;
+  }
+
+  [class*="font-['Source_Sans_Pro:SemiBold"] {
+    font-weight: 600 !important;
+  }
+
+  [class*="font-['Source_Sans_Pro:Regular"] {
+    font-weight: 400 !important;
+  }
+}

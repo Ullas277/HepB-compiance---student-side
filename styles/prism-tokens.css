@@ -1,0 +1,573 @@
+/**
+ * Prism Fusion design tokens (from prism-component-library/design-tokens.json).
+ * Source: https://qaprism.exxat.com/admin/ux/ui/exxat-component-library
+ */
+
+:root {
+  /* Fuse navy palette */
+  --fuse-navy-50: #F5F7FA;
+  --fuse-navy-100: #c5c6cb;
+  --fuse-navy-200: #9ea1a9;
+  --fuse-navy-300: #7d818c;
+  --fuse-navy-400: #5c616f;
+  --fuse-navy-500: #3c4252;
+  --fuse-navy-600: #353a48;
+  --fuse-navy-700: #2d323e;
+  --fuse-navy-800: #262933;
+  --fuse-navy-900: #1e2129;
+  --fuse-navy-A100: #c5c6cb;
+  --fuse-navy-A200: #9ea1a9;
+  --fuse-navy-A400: #5c616f;
+  --fuse-navy-A700: #2d323e;
+
+  --fuse-white-500: #ffffff;
+  --fuse-black-500: #000000;
+
+  /* Blue primary — light theme fills; dark = text/icons; dark-fill = filled CTAs on dark */
+  --prism-blue-primary-light: #3f51b5;
+  --prism-blue-primary-light-hover: #35459a;
+  /* Lighter indigo — ~4.6:1 on #1e1e1e (AA normal text) */
+  --prism-blue-primary-dark: #7c75ff;
+  --prism-blue-primary-dark-hover: #a39eff;
+  /* Near #3f51b5 indigo for dark-mode filled buttons (AA with white; not the light token) */
+  --prism-blue-primary-dark-fill: #4558c4;
+  --prism-blue-primary-dark-fill-hover: #3a4bb0;
+
+  /* Purple primary — light = fills; dark = text on dark surfaces */
+  --prism-purple-primary-light: #9333ea;
+  --prism-purple-primary-light-hover: #7e22ce;
+  /* Lighter purple-400 — ~5.5:1 on #121212 / #1e1e1e (AA normal text); pairs with purple-primary-light fills */
+  --prism-purple-primary-dark: #b47aff;
+  --prism-purple-primary-dark-hover: #c084fc;
+  /* Filled CTAs / badges on purple-dark — #9333ea (AA with white) */
+  --prism-purple-primary-dark-fill: #9333ea;
+  --prism-purple-primary-dark-fill-hover: #7e22ce;
+
+  /* Semantic / brand — blue-light primary palette derived from blue primary light */
+  --prism-primary: var(--prism-blue-primary-light);
+  --prism-primary-hover: var(--prism-blue-primary-light-hover);
+  --prism-primary-hover-foreground: var(--primary-foreground);
+  --prism-primary-muted: color-mix(in srgb, var(--prism-blue-primary-light) 8%, transparent);
+  --prism-primary-subtle: color-mix(in srgb, var(--prism-blue-primary-light) 7%, transparent);
+  --prism-primary-ring: color-mix(in srgb, var(--prism-blue-primary-light) 40%, transparent);
+  --prism-primary-faint: color-mix(in srgb, var(--prism-blue-primary-light) 6%, transparent);
+  --prism-primary-hover-faint: color-mix(in srgb, var(--prism-blue-primary-light) 4%, transparent);
+  --prism-primary-wash: color-mix(in srgb, var(--prism-blue-primary-light) 5%, transparent);
+  --prism-primary-selected-bg: color-mix(in srgb, var(--prism-blue-primary-light) 8%, transparent);
+  --prism-primary-border-light: #c5cae8;
+  --prism-primary-border-hover: #9aa7df;
+  --prism-primary-border-subtle: color-mix(in srgb, var(--prism-blue-primary-light) 18%, transparent);
+  --prism-primary-border-accent: color-mix(in srgb, var(--prism-blue-primary-light) 22%, transparent);
+  --prism-primary-ring-subtle: color-mix(in srgb, var(--prism-blue-primary-light) 12%, transparent);
+  --prism-primary-dark: var(--prism-blue-primary-light);
+  --prism-primary-darker: var(--prism-blue-primary-light);
+  --prism-primary-timeline-idle-border: #b8bed9;
+  --prism-primary-timeline-idle-bg: #e8ebf5;
+  --prism-primary-timeline-idle-text: #1a237e;
+  --prism-primary-timeline-idle-hover: #9aa3c4;
+  --prism-text-hover-neutral: #424242;
+  --prism-brand-purple: var(--prism-purple-primary-light);
+  --prism-brand-cyan: #6ce8fc;
+  --prism-red-primary: #f44336;
+
+  /* Surfaces (Prism shell) — light page chrome behind white cards */
+  --prism-page-bg: #F5F7FA;
+  --prism-surface: var(--fuse-white-500);
+  --prism-surface-muted: #fafafa;
+  --prism-text-primary: rgba(0, 0, 0, 0.87);
+  --prism-text-secondary: #757575;
+  --prism-text-disabled: #94a3b8;
+  --prism-border: rgba(0, 0, 0, 0.12);
+  --prism-border-muted: #cbd5e1;
+
+  /* Status semantics (Figma StatusBadges, timeline nodes, Gantt bars) */
+  --prism-status-success-fg: #14532d;
+  --prism-status-success-solid: #166534;
+  --prism-status-success-bg: #e8f8e0;
+  --prism-status-success-bg-strong: #dcfce7;
+  --prism-status-success-border: #a3d18a;
+  --prism-status-success-border-hover: #86c565;
+  --prism-status-success-ring: #15803d;
+  --prism-status-success-shadow: rgba(22, 101, 52, 0.22);
+  --prism-status-success-icon: #2e7d32;
+
+  --prism-status-warning-fg: #334155;
+  --prism-status-warning-bg: #e2e8f0;
+  --prism-status-warning-border: #64748b;
+  --prism-status-warning-border-hover: #475569;
+  --prism-status-warning-solid: var(--fuse-navy-500);
+  --prism-status-warning-solid-border: var(--fuse-navy-600);
+  --prism-status-warning-shadow: rgba(71, 85, 105, 0.25);
+
+  /* Deactivated / disabled control fill — Prism slate (same as warning-bg) */
+  --prism-bg-disabled: var(--prism-status-warning-bg);
+
+  --prism-status-danger-fg: #BB1E1F;
+  --prism-status-danger-fg-muted: #9A1819;
+  --prism-status-danger-accent: #BB1E1F;
+  --prism-status-danger-bright: #BB1E1F;
+  /* Filled destructive / solid danger — stable across themes (AA with white); dark remaps text accents only */
+  --prism-status-danger-fill: #BB1E1F;
+  --prism-status-danger-bg: rgba(187, 30, 31, 0.18);
+  --prism-status-danger-bg-soft: rgba(187, 30, 31, 0.12);
+  --prism-status-danger-bg-pale: rgba(187, 30, 31, 0.08);
+  --prism-status-danger-border: rgba(187, 30, 31, 0.45);
+  --prism-status-danger-border-soft: rgba(187, 30, 31, 0.3);
+  --prism-status-danger-ring: #BB1E1F;
+  --prism-status-danger-icon: #BB1E1F;
+
+  /* Direct / indirect chips — alias AA-safe status tokens (not fixed Material greens/pinks) */
+  --prism-chip-direct: var(--prism-status-success-fg);
+  --prism-chip-indirect: var(--prism-status-danger-accent);
+
+  --prism-status-amber-fg: #92400e;
+  --prism-status-amber-solid: #b45309;
+  --prism-status-amber-bg: #fffbeb;
+  --prism-status-amber-bg-hover: #fef3c7;
+  --prism-status-amber-ring: #f59e0b;
+  --prism-status-amber-border: #fdba74;
+
+  --prism-status-pause-fg: #9a5a00;
+  --prism-status-pause-border: #fed7aa;
+
+  --prism-status-chip-progress-bg: #d0e6ff;
+  --prism-status-chip-neutral-bg: #f8e196;
+  --prism-status-chip-neutral-ring: #e8c95a;
+  --prism-status-chip-count-bg: #d8d8d8;
+
+  --prism-status-neutral-solid: #5d6f83;
+  --prism-status-connector: #a8c5e8;
+  --prism-status-meta-muted: #5a678a;
+  --prism-status-slate: #5d779a;
+  --prism-status-slate-bg: #dce6f0;
+  --prism-status-slate-fg: #2c4a6a;
+  --prism-status-dot-muted: #b0b8c4;
+
+  --prism-brand-pink: #e31c79;
+  --prism-brand-violet: #6d28d9;
+  --prism-brand-violet-light: #d1b5fd;
+  --prism-brand-slate: #3c4d68;
+  --prism-avatar-wash: #fbf8ff;
+  --prism-primary-avatar-bg: #e8f0fe;
+  --prism-status-success-avatar-bg: #e8f5e9;
+  --prism-border-light: #e7e7e7;
+  --prism-status-milestone-complete-bg: #dcf7d8;
+  --prism-status-milestone-complete-fg: #0f6b36;
+  --prism-status-milestone-warning-bg: #fff3cd;
+  --prism-status-milestone-warning-fg: #856404;
+
+  /* Profile completion banner — light blue wash on white card */
+  --prism-profile-banner-gradient: linear-gradient(
+    92.6583deg,
+    rgb(239, 246, 255) 0.70097%,
+    rgb(255, 255, 255) 55.124%,
+    rgb(239, 246, 255) 98.568%
+  );
+
+  /* Product placement banner — brand pink/violet radial wash on white card */
+  --prism-product-placement-banner-bg: url("data:image/svg+xml;utf8,<svg viewBox='0 0 332 82' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(63.8 32.05 -8.5958 120.11 -354.5 -218.5)'><stop stop-color='rgba(238,140,255,0.88)' offset='0'/><stop stop-color='rgba(199,224,255,0.36)' offset='1'/></radialGradient></defs></svg>"),
+    linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+
+  /* Product placement — Exxat One card (warm beige to pink wash) */
+  --prism-product-placement-exxat-one-bg: linear-gradient(
+    90deg,
+    rgb(238, 223, 196) 0%,
+    rgb(254, 230, 238) 52%,
+    rgb(252, 228, 236) 100%
+  );
+
+  /* Product placement — Exam Management card (lavender to sky blue wash) */
+  --prism-product-placement-exam-bg: var(--prism-product-placement-banner-bg);
+
+  /* Product placement — subtle tinted drop shadows (expanded panel only) */
+  --prism-product-placement-exxat-one-shadow: 0 8px 18px -6px color-mix(in srgb, var(--prism-brand-pink) 16%, transparent);
+  --prism-product-placement-exam-shadow: 0 8px 18px -6px color-mix(in srgb, var(--prism-purple-primary-light) 14%, transparent);
+
+  /* Onsite learning promo card — warm pink-to-beige wash */
+  --prism-onsite-learning-promo-bg: linear-gradient(
+    213.142deg,
+    rgb(254, 230, 238) 47.966%,
+    rgb(238, 223, 196) 125.4%
+  );
+
+  /*
+   * Placement card / banner gradient washes (lightened −10 opacity points vs prior Tailwind stops).
+   * High-contrast themes override these to flat card surfaces in prism-theme-modes.css.
+   */
+  --prism-placement-wash-danger: rgba(187, 30, 31, 0.08);
+  --prism-placement-wash-success: color-mix(in srgb, var(--prism-status-success-bg) 75%, white);
+  --prism-placement-wash-amber-from: rgba(245, 158, 11, 0.05);
+  --prism-placement-wash-amber-via: rgba(245, 158, 11, 0.03);
+  --prism-placement-wash-amber-pause-from: rgba(245, 158, 11, 0.03);
+  --prism-placement-wash-amber-pause-via: rgba(245, 158, 11, 0.02);
+  --prism-placement-wash-amber-paused-from: rgba(251, 191, 36, 0.04);
+  --prism-placement-wash-amber-paused-via: rgba(251, 191, 36, 0.02);
+  --prism-placement-wash-primary-from: color-mix(in srgb, var(--prism-primary) 4%, transparent);
+  --prism-placement-wash-primary-via: color-mix(in srgb, var(--prism-primary) 2%, transparent);
+  --prism-placement-wash-primary-soft: color-mix(in srgb, var(--prism-primary) 3%, transparent);
+  --prism-placement-wash-muted-from: color-mix(in srgb, var(--muted) 40%, var(--card));
+  --prism-placement-wash-muted-via: color-mix(in srgb, var(--muted) 25%, var(--card));
+
+  /* Typography — Source Sans Pro (Prism default) */
+  --prism-font-family: "Source Sans Pro", sans-serif;
+  --prism-font-size-10: 0.625rem;
+  --prism-font-size-13: 0.8125rem;
+  --prism-font-size-14: 0.875rem;
+  --prism-font-size-16: 1rem;
+  --prism-font-size-18: 1.125rem;
+  --prism-font-size-20: 1.25rem;
+  --prism-font-size-24: 1.5rem;
+  --prism-font-size-28: 1.75rem;
+  --prism-font-size-32: 2rem;
+  --prism-font-size-48: 3rem;
+
+  --prism-font-weight-100: 100;
+  --prism-font-weight-300: 300;
+  --prism-font-weight-400: 400;
+  --prism-font-weight-500: 500;
+  --prism-font-weight-600: 600;
+  --prism-font-weight-700: 700;
+  --prism-font-weight-800: 800;
+  --prism-font-weight-900: 900;
+
+  /* Spacing — 4px grid (matches Prism padding scale) */
+  --prism-space-0: 0;
+  --prism-space-1: 4px;
+  --prism-space-2: 8px;
+  --prism-space-2_5: 10px;
+  --prism-space-3: 12px;
+  --prism-space-4: 16px;
+  --prism-space-5: 20px;
+  --prism-space-6: 24px;
+  --prism-space-7: 28px;
+  --prism-space-8: 32px;
+  --prism-space-10: 40px;
+  --prism-space-12: 48px;
+
+  /* Layout / controls */
+  --prism-control-height: 32px;
+  --prism-control-height-sm: 28px;
+  --prism-radius-control: 4px;
+  --prism-radius-card: 8px;
+
+  /* Overlays (modals / drawers) */
+  --prism-overlay: color-mix(in srgb, var(--fuse-black-500) 50%, transparent);
+  --prism-overlay-strong: color-mix(in srgb, var(--fuse-black-500) 70%, transparent);
+  --prism-overlay-heavy: color-mix(in srgb, var(--fuse-black-500) 80%, transparent);
+
+  /* Elevation — navy-tinted shadows derived from fuse palette */
+  --prism-shadow-card: 0 2px 12px color-mix(in srgb, var(--fuse-navy-900) 7%, transparent);
+  --prism-shadow-card-sm: 0 1px 2px color-mix(in srgb, var(--fuse-navy-900) 5%, transparent);
+  --prism-shadow-elevate: 0 1px 8px color-mix(in srgb, var(--fuse-navy-900) 7%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--fuse-black-500) 5%, transparent);
+
+  /* Decorative illustration accents (coursework art) */
+  --prism-illustration-sky: #009de9;
+  --prism-illustration-sun: #ffda2d;
+  --prism-illustration-sparkle: #ffeeb4;
+
+  /* My Coursework banner art — fixed light palette (do not theme/invert in dark modes) */
+  --prism-coursework-illustration-fill: var(--fuse-navy-50);
+  --prism-coursework-illustration-accent: #3c4d68;
+
+  /* Legacy aliases (match Prism Angular class names / design-tokens.css) */
+  --exxatprimary: var(--prism-primary);
+  --exxatbrand-primary: var(--prism-primary);
+  --exxatchip-direct: var(--prism-chip-direct);
+  --exxatchip-indirect: var(--prism-chip-indirect);
+  --exxatbrand-purple: var(--prism-brand-purple);
+  --exxatbrand-cyan: var(--prism-brand-cyan);
+}
+
+/* Tailwind v4 theme bridges — use classes like bg-fuse-navy-700, text-prism-primary, p-prism-2 */
+@theme inline {
+  --font-sans: var(--prism-font-family);
+
+  --color-fuse-navy-50: var(--fuse-navy-50);
+  --color-fuse-navy-100: var(--fuse-navy-100);
+  --color-fuse-navy-200: var(--fuse-navy-200);
+  --color-fuse-navy-300: var(--fuse-navy-300);
+  --color-fuse-navy-400: var(--fuse-navy-400);
+  --color-fuse-navy-500: var(--fuse-navy-500);
+  --color-fuse-navy-600: var(--fuse-navy-600);
+  --color-fuse-navy-700: var(--fuse-navy-700);
+  --color-fuse-navy-800: var(--fuse-navy-800);
+  --color-fuse-navy-900: var(--fuse-navy-900);
+  --color-fuse-white-500: var(--fuse-white-500);
+  --color-fuse-black-500: var(--fuse-black-500);
+
+  --color-prism-blue-primary-light: var(--prism-blue-primary-light);
+  --color-prism-blue-primary-light-hover: var(--prism-blue-primary-light-hover);
+  --color-prism-blue-primary-dark: var(--prism-blue-primary-dark);
+  --color-prism-blue-primary-dark-hover: var(--prism-blue-primary-dark-hover);
+  --color-prism-blue-primary-dark-fill: var(--prism-blue-primary-dark-fill);
+  --color-prism-blue-primary-dark-fill-hover: var(--prism-blue-primary-dark-fill-hover);
+  --color-prism-purple-primary-light: var(--prism-purple-primary-light);
+  --color-prism-purple-primary-light-hover: var(--prism-purple-primary-light-hover);
+  --color-prism-purple-primary-dark: var(--prism-purple-primary-dark);
+  --color-prism-purple-primary-dark-hover: var(--prism-purple-primary-dark-hover);
+  --color-prism-purple-primary-dark-fill: var(--prism-purple-primary-dark-fill);
+  --color-prism-purple-primary-dark-fill-hover: var(--prism-purple-primary-dark-fill-hover);
+  --color-prism-primary: var(--prism-primary);
+  --color-prism-primary-hover: var(--prism-primary-hover);
+  --color-prism-primary-hover-foreground: var(--prism-primary-hover-foreground);
+  --color-prism-primary-muted: var(--prism-primary-muted);
+  --color-prism-primary-subtle: var(--prism-primary-subtle);
+  --color-prism-primary-faint: var(--prism-primary-faint);
+  --color-prism-primary-hover-faint: var(--prism-primary-hover-faint);
+  --color-prism-primary-wash: var(--prism-primary-wash);
+  --color-prism-primary-selected-bg: var(--prism-primary-selected-bg);
+  --color-prism-primary-border-light: var(--prism-primary-border-light);
+  --color-prism-primary-border-hover: var(--prism-primary-border-hover);
+  --color-prism-primary-border-subtle: var(--prism-primary-border-subtle);
+  --color-prism-primary-border-accent: var(--prism-primary-border-accent);
+  --color-prism-primary-ring-subtle: var(--prism-primary-ring-subtle);
+  --color-prism-primary-dark: var(--prism-primary-dark);
+  --color-prism-primary-darker: var(--prism-primary-darker);
+  --color-prism-primary-timeline-idle-border: var(--prism-primary-timeline-idle-border);
+  --color-prism-primary-timeline-idle-bg: var(--prism-primary-timeline-idle-bg);
+  --color-prism-primary-timeline-idle-text: var(--prism-primary-timeline-idle-text);
+  --color-prism-primary-timeline-idle-hover: var(--prism-primary-timeline-idle-hover);
+  --color-prism-text-hover-neutral: var(--prism-text-hover-neutral);
+  --color-prism-chip-direct: var(--prism-chip-direct);
+  --color-prism-chip-indirect: var(--prism-chip-indirect);
+  --color-prism-brand-purple: var(--prism-brand-purple);
+  --color-prism-brand-cyan: var(--prism-brand-cyan);
+  --color-prism-red-primary: var(--prism-red-primary);
+  --color-prism-page-bg: var(--prism-page-bg);
+  --color-prism-surface: var(--prism-surface);
+  --color-prism-surface-muted: var(--prism-surface-muted);
+  --color-prism-text-secondary: var(--prism-text-secondary);
+  --color-prism-text-disabled: var(--prism-text-disabled);
+  --color-prism-bg-disabled: var(--prism-bg-disabled);
+  --color-prism-border: var(--prism-border);
+  --color-prism-border-muted: var(--prism-border-muted);
+
+  --color-prism-status-success-fg: var(--prism-status-success-fg);
+  --color-prism-status-success-solid: var(--prism-status-success-solid);
+  --color-prism-status-success-bg: var(--prism-status-success-bg);
+  --color-prism-status-success-bg-strong: var(--prism-status-success-bg-strong);
+  --color-prism-status-success-border: var(--prism-status-success-border);
+  --color-prism-status-success-ring: var(--prism-status-success-ring);
+  --color-prism-status-success-icon: var(--prism-status-success-icon);
+
+  --color-prism-status-warning-fg: var(--prism-status-warning-fg);
+  --color-prism-status-warning-bg: var(--prism-status-warning-bg);
+  --color-prism-status-warning-border: var(--prism-status-warning-border);
+  --color-prism-status-warning-solid: var(--prism-status-warning-solid);
+
+  --color-prism-status-danger-fg: var(--prism-status-danger-fg);
+  --color-prism-status-danger-accent: var(--prism-status-danger-accent);
+  --color-prism-status-danger-bright: var(--prism-status-danger-bright);
+  --color-prism-status-danger-fill: var(--prism-status-danger-fill);
+  --color-prism-status-danger-bg: var(--prism-status-danger-bg);
+  --color-prism-status-danger-bg-soft: var(--prism-status-danger-bg-soft);
+  --color-prism-status-danger-border: var(--prism-status-danger-border);
+  --color-prism-status-danger-ring: var(--prism-status-danger-ring);
+  --color-prism-status-danger-icon: var(--prism-status-danger-icon);
+
+  --color-prism-status-amber-fg: var(--prism-status-amber-fg);
+  --color-prism-status-amber-solid: var(--prism-status-amber-solid);
+  --color-prism-status-amber-bg: var(--prism-status-amber-bg);
+  --color-prism-status-amber-ring: var(--prism-status-amber-ring);
+  --color-prism-status-amber-border: var(--prism-status-amber-border);
+
+  --color-prism-status-pause-fg: var(--prism-status-pause-fg);
+  --color-prism-status-pause-border: var(--prism-status-pause-border);
+
+  --color-prism-status-chip-progress-bg: var(--prism-status-chip-progress-bg);
+  --color-prism-status-chip-neutral-bg: var(--prism-status-chip-neutral-bg);
+  --color-prism-status-chip-neutral-ring: var(--prism-status-chip-neutral-ring);
+  --color-prism-status-chip-count-bg: var(--prism-status-chip-count-bg);
+
+  --color-prism-status-neutral-solid: var(--prism-status-neutral-solid);
+  --color-prism-status-connector: var(--prism-status-connector);
+  --color-prism-status-meta-muted: var(--prism-status-meta-muted);
+  --color-prism-status-slate: var(--prism-status-slate);
+  --color-prism-status-dot-muted: var(--prism-status-dot-muted);
+
+  --color-prism-brand-pink: var(--prism-brand-pink);
+  --color-prism-brand-violet: var(--prism-brand-violet);
+  --color-prism-brand-slate: var(--prism-brand-slate);
+  --color-prism-avatar-wash: var(--prism-avatar-wash);
+  --color-prism-primary-avatar-bg: var(--prism-primary-avatar-bg);
+  --color-prism-status-success-avatar-bg: var(--prism-status-success-avatar-bg);
+  --color-prism-border-light: var(--prism-border-light);
+  --color-prism-status-milestone-complete-bg: var(--prism-status-milestone-complete-bg);
+  --color-prism-status-milestone-complete-fg: var(--prism-status-milestone-complete-fg);
+  --color-prism-status-milestone-warning-bg: var(--prism-status-milestone-warning-bg);
+  --color-prism-status-milestone-warning-fg: var(--prism-status-milestone-warning-fg);
+
+  --color-prism-overlay: var(--prism-overlay);
+  --color-prism-overlay-strong: var(--prism-overlay-strong);
+  --color-prism-overlay-heavy: var(--prism-overlay-heavy);
+  --color-prism-illustration-sky: var(--prism-illustration-sky);
+  --color-prism-illustration-sun: var(--prism-illustration-sun);
+  --color-prism-illustration-sparkle: var(--prism-illustration-sparkle);
+
+  --shadow-prism-card: var(--prism-shadow-card);
+  --shadow-prism-card-sm: var(--prism-shadow-card-sm);
+  --shadow-prism-elevate: var(--prism-shadow-elevate);
+
+  --text-prism-10: var(--prism-font-size-10);
+  --text-prism-13: var(--prism-font-size-13);
+  --text-prism-14: var(--prism-font-size-14);
+  --text-prism-16: var(--prism-font-size-16);
+  --text-prism-18: var(--prism-font-size-18);
+  --text-prism-20: var(--prism-font-size-20);
+  --text-prism-24: var(--prism-font-size-24);
+  --text-prism-28: var(--prism-font-size-28);
+  --text-prism-32: var(--prism-font-size-32);
+  --text-prism-48: var(--prism-font-size-48);
+
+  --spacing-prism-1: var(--prism-space-1);
+  --spacing-prism-2: var(--prism-space-2);
+  --spacing-prism-10: var(--prism-space-2_5);
+  --spacing-prism-3: var(--prism-space-3);
+  --spacing-prism-4: var(--prism-space-4);
+  --spacing-prism-5: var(--prism-space-5);
+  --spacing-prism-6: var(--prism-space-6);
+  --spacing-prism-8: var(--prism-space-8);
+
+  --radius-prism-control: var(--prism-radius-control);
+  --radius-prism-card: var(--prism-radius-card);
+
+  --height-prism-control: var(--prism-control-height);
+  --min-height-prism-control: var(--prism-control-height);
+}
+
+/* Fixed blue primaries — always #3f51b5 / #7c75ff (not theme --prism-primary). */
+@utility bg-prism-blue-primary-light {
+  background-color: var(--prism-blue-primary-light);
+}
+
+@utility bg-prism-blue-primary-light-hover {
+  background-color: var(--prism-blue-primary-light-hover);
+}
+
+@utility text-prism-blue-primary-light {
+  color: var(--prism-blue-primary-light);
+}
+
+@utility bg-prism-blue-primary-dark {
+  background-color: var(--prism-blue-primary-dark);
+}
+
+@utility bg-prism-blue-primary-dark-hover {
+  background-color: var(--prism-blue-primary-dark-hover);
+}
+
+@utility text-prism-blue-primary-dark {
+  color: var(--prism-blue-primary-dark);
+}
+
+@utility bg-prism-blue-primary-dark-fill {
+  background-color: var(--prism-blue-primary-dark-fill);
+}
+
+@utility bg-prism-blue-primary-dark-fill-hover {
+  background-color: var(--prism-blue-primary-dark-fill-hover);
+}
+
+@utility text-prism-blue-primary-dark-fill {
+  color: var(--prism-blue-primary-dark-fill);
+}
+
+/* Fixed purple primaries — always #9333ea / #b47aff (not theme --prism-primary). */
+@utility bg-prism-purple-primary-light {
+  background-color: var(--prism-purple-primary-light);
+}
+
+@utility bg-prism-purple-primary-light-hover {
+  background-color: var(--prism-purple-primary-light-hover);
+}
+
+@utility text-prism-purple-primary-light {
+  color: var(--prism-purple-primary-light);
+}
+
+@utility bg-prism-purple-primary-dark {
+  background-color: var(--prism-purple-primary-dark);
+}
+
+@utility bg-prism-purple-primary-dark-hover {
+  background-color: var(--prism-purple-primary-dark-hover);
+}
+
+@utility text-prism-purple-primary-dark {
+  color: var(--prism-purple-primary-dark);
+}
+
+/* Placement hero / banner washes — theme-aware gradient stops */
+.placement-wash {
+  background-color: var(--card);
+}
+
+.placement-wash--danger-b {
+  background-image: linear-gradient(to bottom, var(--prism-placement-wash-danger), var(--card));
+}
+
+.placement-wash--danger-br {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--prism-placement-wash-danger),
+    var(--card)
+  );
+}
+
+.placement-wash--amber-b {
+  background-image: linear-gradient(
+    to bottom,
+    var(--prism-placement-wash-amber-from),
+    var(--prism-placement-wash-amber-via),
+    var(--card)
+  );
+}
+
+.placement-wash--amber-pause-br {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--prism-placement-wash-amber-pause-from),
+    var(--prism-placement-wash-amber-pause-via),
+    var(--card)
+  );
+}
+
+.placement-wash--paused-b {
+  background-image: linear-gradient(
+    to bottom,
+    var(--prism-placement-wash-amber-paused-from),
+    var(--prism-placement-wash-amber-paused-via),
+    var(--card)
+  );
+}
+
+.placement-wash--success-b {
+  background-image: linear-gradient(to bottom, var(--prism-placement-wash-success), var(--card));
+}
+
+.placement-wash--success-r {
+  background-image: linear-gradient(to right, var(--prism-placement-wash-success), var(--card));
+}
+
+.placement-wash--muted-b {
+  background-image: linear-gradient(
+    to bottom,
+    var(--prism-placement-wash-muted-from),
+    var(--prism-placement-wash-muted-via),
+    var(--card)
+  );
+}
+
+.placement-wash--primary-b {
+  background-image: linear-gradient(
+    to bottom,
+    var(--prism-placement-wash-primary-from),
+    var(--prism-placement-wash-primary-via),
+    var(--card)
+  );
+}
+
+.placement-wash--primary-soft-b {
+  background-image: linear-gradient(to bottom, var(--prism-placement-wash-primary-soft), var(--card));
+}

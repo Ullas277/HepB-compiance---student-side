@@ -1,0 +1,38 @@
+/**
+ * Role tokens for scaffold (subset of theme.css without Tailwind @apply).
+ */
+:root {
+  --foreground: var(--prism-text-primary);
+  --primary-foreground: var(--fuse-white-500);
+  --border: var(--prism-border);
+  --muted-foreground: var(--prism-text-secondary);
+}
+
+html {
+  font-size: var(--prism-font-size-16);
+  background-color: var(--prism-page-bg);
+}
+
+body {
+  margin: 0;
+  color: var(--foreground);
+  background-color: var(--prism-page-bg);
+  font-family: var(--prism-font-family);
+  font-weight: var(--prism-font-weight-400);
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: var(--prism-primary);
+}

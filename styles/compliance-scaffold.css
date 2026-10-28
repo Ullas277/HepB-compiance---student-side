@@ -1,0 +1,462 @@
+.compliance-app {
+  /* HepB sheet + backdrop (panel 90vw). */
+  --hepb-drawer-left-visible: max(179px, 14vw);
+  --hepb-drawer-panel-width: 90vw;
+  --hepb-drawer-backdrop-opacity: 0.25;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--prism-page-bg);
+}
+
+/* —— Top bar —— */
+.compliance-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--prism-space-4);
+  min-height: 48px;
+  padding: 0 var(--prism-space-6);
+  background: var(--prism-surface);
+  border-bottom: 1px solid var(--prism-border);
+}
+
+.compliance-topbar__left {
+  display: flex;
+  align-items: center;
+  gap: var(--prism-space-4);
+  min-width: 0;
+}
+
+.compliance-topbar__menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--prism-text-primary);
+  border-radius: var(--prism-radius-control);
+}
+
+.compliance-topbar__menu:hover {
+  background: var(--prism-primary-hover-faint);
+}
+
+.compliance-topbar__title {
+  margin: 0;
+  font-size: var(--prism-font-size-18);
+  font-weight: var(--prism-font-weight-600);
+  line-height: 1.25;
+  color: var(--prism-text-primary);
+  white-space: nowrap;
+}
+
+.compliance-topbar__right {
+  display: flex;
+  align-items: center;
+  gap: var(--prism-space-3);
+  flex-shrink: 0;
+}
+
+.compliance-icon-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--prism-text-secondary);
+  border-radius: var(--prism-radius-control);
+}
+
+.compliance-icon-btn:hover {
+  background: var(--prism-primary-hover-faint);
+  color: var(--prism-text-primary);
+}
+
+.compliance-icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.compliance-badge-count {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--prism-status-danger-fill);
+  color: var(--primary-foreground);
+  font-size: 10px;
+  font-weight: var(--prism-font-weight-600);
+  line-height: 16px;
+  text-align: center;
+}
+
+.compliance-help-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--prism-brand-pink);
+  color: var(--primary-foreground);
+}
+
+.compliance-help-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.compliance-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: var(--prism-control-height);
+  padding: 0 var(--prism-space-3);
+  border: 0;
+  border-radius: var(--prism-radius-control);
+  font-size: var(--prism-font-size-14);
+  font-weight: var(--prism-font-weight-600);
+  white-space: nowrap;
+}
+
+.compliance-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.compliance-btn--chat {
+  background: var(--prism-primary-darker);
+  color: var(--primary-foreground);
+}
+
+.compliance-btn--leo {
+  background: var(--prism-brand-pink);
+  color: var(--primary-foreground);
+}
+
+.compliance-user {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 320px;
+  margin-left: var(--prism-space-2);
+  font-size: var(--prism-font-size-13);
+  color: var(--prism-text-primary);
+  white-space: nowrap;
+}
+
+.compliance-user__chevron {
+  width: 16px;
+  height: 16px;
+  color: var(--prism-text-secondary);
+  flex-shrink: 0;
+}
+
+/* —— Info banner —— */
+.compliance-info-banner {
+  padding: var(--prism-space-3) var(--prism-space-6);
+  background: var(--prism-status-chip-progress-bg);
+  border-bottom: 1px solid color-mix(in srgb, var(--prism-primary) 12%, transparent);
+  font-size: var(--prism-font-size-14);
+  color: var(--prism-text-primary);
+  line-height: 1.45;
+}
+
+.compliance-info-banner a {
+  color: var(--prism-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* —— Summary —— */
+.compliance-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--prism-space-4);
+  padding: var(--prism-space-3) var(--prism-space-6);
+  background: var(--prism-surface);
+  border-bottom: 1px solid var(--prism-border);
+}
+
+.compliance-summary__left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--prism-space-4);
+  font-size: var(--prism-font-size-14);
+  color: var(--prism-text-primary);
+}
+
+.compliance-summary__counts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--prism-space-3);
+}
+
+/* Summary chips — SC1: white outline card, tinted count badge, dark label */
+.compliance-summary-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border: 1px solid var(--prism-border-light);
+  border-radius: var(--prism-radius-card);
+  background: var(--prism-surface);
+  font-size: var(--prism-font-size-14);
+  line-height: 1.2;
+}
+
+.compliance-summary-chip__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  padding: 4px 8px;
+  border-radius: var(--prism-radius-control);
+  font-size: var(--prism-font-size-14);
+  font-weight: var(--prism-font-weight-600);
+}
+
+.compliance-summary-chip__label {
+  display: inline-flex;
+  align-items: center;
+  font-weight: var(--prism-font-weight-400);
+  color: var(--prism-text-primary);
+}
+
+.compliance-summary-chip--success .compliance-summary-chip__num {
+  background: var(--prism-status-success-bg-strong);
+  color: var(--prism-status-success-fg);
+}
+
+.compliance-summary-chip--pending .compliance-summary-chip__num {
+  background: var(--prism-status-chip-neutral-bg);
+  color: var(--prism-status-amber-fg);
+}
+
+.compliance-summary-chip--attention .compliance-summary-chip__num {
+  background: var(--prism-status-danger-bg);
+  color: var(--prism-status-danger-fg);
+}
+
+.compliance-summary__tools {
+  display: flex;
+  align-items: center;
+  gap: var(--prism-space-2);
+  flex-shrink: 0;
+}
+
+/* —— Table —— */
+.compliance-table-wrap {
+  flex: 1;
+  overflow: auto;
+  background: var(--prism-surface);
+}
+
+.compliance-table {
+  width: 100%;
+  min-width: 1280px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: var(--prism-font-size-13);
+}
+
+.compliance-table col.col-req {
+  width: 14%;
+}
+
+.compliance-table col.col-cat {
+  width: 14%;
+}
+
+.compliance-table col.col-status {
+  width: 8%;
+}
+
+.compliance-table col.col-date {
+  width: 8%;
+}
+
+.compliance-table col.col-reason {
+  width: 14%;
+}
+
+.compliance-table col.col-comment {
+  width: 16%;
+}
+
+.compliance-table col.col-incl {
+  width: 4%;
+}
+
+.compliance-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 10px 12px;
+  background: var(--prism-primary-timeline-idle-bg);
+  border-bottom: 1px solid var(--prism-primary-border-light);
+  border-right: 1px solid color-mix(in srgb, var(--prism-primary) 8%, transparent);
+  text-align: left;
+  font-size: 11px;
+  font-weight: var(--prism-font-weight-700);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--prism-primary-timeline-idle-text);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.compliance-table thead th:last-child {
+  border-right: 0;
+}
+
+.compliance-table__sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.compliance-table__sort svg {
+  width: 12px;
+  height: 12px;
+  opacity: 0.85;
+}
+
+.compliance-table tbody td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--prism-border-light);
+  border-right: 1px solid var(--prism-border-light);
+  vertical-align: middle;
+  color: var(--prism-text-primary);
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.compliance-table tbody td:last-child {
+  border-right: 0;
+  text-align: center;
+}
+
+.compliance-table tbody tr:hover td {
+  background: var(--prism-primary-hover-faint);
+}
+
+.compliance-table__row--interactive {
+  cursor: pointer;
+}
+
+.compliance-table__row--interactive:focus-visible {
+  outline: 2px solid var(--prism-primary);
+  outline-offset: -2px;
+}
+
+.compliance-table .cell-muted {
+  color: var(--prism-text-secondary);
+}
+
+.compliance-table .cell-danger {
+  color: var(--prism-status-danger-fg);
+  font-weight: var(--prism-font-weight-600);
+}
+
+.compliance-table .cell-category {
+  font-size: 11px;
+  font-weight: var(--prism-font-weight-600);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--prism-text-secondary);
+}
+
+.compliance-table .cell-share svg {
+  width: 18px;
+  height: 18px;
+  color: var(--prism-text-secondary);
+}
+
+.compliance-show-more {
+  margin-left: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--prism-primary);
+  text-decoration: underline;
+  font-size: inherit;
+  font-weight: var(--prism-font-weight-600);
+}
+
+/* Status pills — SC2: soft rounded rect, no stroke */
+.compliance-table td:has(.status-pill) {
+  white-space: nowrap;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: 100%;
+  min-height: 24px;
+  padding: var(--prism-space-1) var(--prism-space-2_5);
+  border: none;
+  border-radius: var(--prism-radius-control);
+  font-family: inherit;
+  font-size: var(--prism-font-size-13);
+  font-weight: var(--prism-font-weight-400);
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.status-pill--get-started {
+  background: var(--prism-status-chip-count-bg);
+  color: var(--prism-status-warning-fg);
+}
+
+.status-pill--not-approved,
+.status-pill--disapproved,
+.status-pill--expired {
+  background: var(--prism-status-danger-bg-soft);
+  color: var(--prism-status-danger-fg);
+}
+
+.status-pill--in-progress {
+  background: var(--prism-status-chip-progress-bg);
+  color: var(--prism-primary-dark);
+}
+
+.status-pill--pending-review {
+  background: var(--prism-status-chip-neutral-bg);
+  color: var(--prism-status-amber-fg);
+}
+
+.status-pill--approved {
+  background: var(--prism-status-success-bg);
+  color: var(--prism-status-success-fg);
+}
+
+.status-pill--interactive {
+  cursor: pointer;
+  appearance: none;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.status-pill--interactive:hover {
+  filter: brightness(0.97);
+}

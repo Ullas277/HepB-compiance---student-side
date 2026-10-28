@@ -1,0 +1,17 @@
+[
+  {"requirement":"Hepatitis A","category":"HEALTH & IMMUNIZATION","status":"Get Started","dueDate":"-","followUpDate":"-","expirationDate":"-","reason":"-","comment":"-"},
+  {"requirement":"Flu (Influenza)","category":"HEALTH & IMMUNIZATION","status":"Not Approved","dueDate":"08/01/2022","followUpDate":"-","expirationDate":"02/15/2023","reason":"Unable to open Document","comment":"Please upload a document to review.","expirationDateDanger":true},
+  {"requirement":"Polio - Update","category":"HEALTH & IMMUNIZATION","status":"Get Started","dueDate":"-","followUpDate":"-","expirationDate":"-","reason":"-","comment":"-"},
+  {"requirement":"Hepatitis B","category":"HEALTH & IMMUNIZATION","status":"Get Started","dueDate":"10/01/2023","followUpDate":"-","expirationDate":"-","reason":"-","comment":"-"},
+  {"requirement":"MMR","category":"HEALTH & IMMUNIZATION","status":"Pending Review","dueDate":"09/15/2023","followUpDate":"-","expirationDate":"12/23/2023","reason":"Pending Clarification from School","comment":"XYZ","expirationDateDanger":true},
+  {"requirement":"Varicella","category":"HEALTH & IMMUNIZATION","status":"Approved","dueDate":"-","followUpDate":"-","expirationDate":"-","reason":"-","comment":"-"},
+  {"requirement":"Tdap","category":"HEALTH & IMMUNIZATION","status":"Expired","dueDate":"03/01/2022","followUpDate":"-","expirationDate":"03/01/2023","reason":"-","comment":"-","expirationDateDanger":true},
+  {"requirement":"TB Test","category":"HEALTH & IMMUNIZATION","status":"Not Approved","dueDate":"06/15/2022","followUpDate":"04/05/2024","expirationDate":"-","reason":"-","comment":"-","followUpDateDanger":true},
+  {"requirement":"CPR NEW","category":"MEMBERSHIPS & LICENSURE","status":"Get Started","dueDate":"-","followUpDate":"-","expirationDate":"-","reason":"-","comment":"-"},
+  {"requirement":"RN License Verification","category":"MEMBERSHIPS & LICENSURE","status":"Not Approved","dueDate":"01/01/2023","followUpDate":"-","expirationDate":"01/01/2024","reason":"Document not legible","comment":"Please re-upload a clear copy.","expirationDateDanger":true},
+  {"requirement":"HIPAA Training","category":"ATTESTATIONS & ACKNOWLEDGMENTS","status":"In Progress","dueDate":"-","followUpDate":"-","expirationDate":"-","reason":"-","comment":"-"},
+  {"requirement":"Consent of Release","category":"ATTESTATIONS & ACKNOWLEDGMENTS","status":"In Progress","dueDate":"-","followUpDate":"04/05/2024","expirationDate":"-","reason":"-","comment":"-","followUpDateDanger":true},
+  {"requirement":"Consent of Treatment","category":"ATTESTATIONS & ACKNOWLEDGMENTS","status":"Pending Review","dueDate":"-","followUpDate":"-","expirationDate":"12/23/2023","reason":"-","comment":"Please upload a signed document to review.","commentShowMore":true,"expirationDateDanger":true},
+  {"requirement":"OSHA Training","category":"ATTESTATIONS & ACKNOWLEDGMENTS","status":"Not Approved","dueDate":"05/01/2022","followUpDate":"-","expirationDate":"05/01/2023","reason":"-","comment":"-","expirationDateDanger":true},
+  {"requirement":"Professional Liability Insurance","category":"MEMBERSHIPS & LICENSURE","status":"Get Started","dueDate":"-","followUpDate":"-","expirationDate":"-","reason":"-","comment":"-"}
+]

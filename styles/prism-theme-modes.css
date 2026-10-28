@@ -1,0 +1,506 @@
+/**
+ * Prism Fuse color themes — mirrors fuse-theme-options (Blue / Purple / High Contrast × Light / Dark).
+ * Applied via class on <html> (e.g. theme-blue-light).
+ */
+
+/* Blue light — blue primary light token on light surfaces */
+html.theme-blue-light {
+  --prism-page-bg: var(--fuse-navy-50);
+  --prism-surface: var(--fuse-white-500);
+  --prism-surface-muted: #fafafa;
+  --background: var(--prism-page-bg);
+  --card: var(--prism-surface);
+  --muted: var(--prism-surface-muted);
+
+  --prism-primary: var(--prism-blue-primary-light);
+  --prism-primary-hover: var(--prism-blue-primary-light-hover);
+  --prism-primary-muted: color-mix(in srgb, var(--prism-blue-primary-light) 8%, transparent);
+  --prism-primary-subtle: color-mix(in srgb, var(--prism-blue-primary-light) 7%, transparent);
+  --prism-primary-faint: color-mix(in srgb, var(--prism-blue-primary-light) 6%, transparent);
+  --prism-primary-hover-faint: color-mix(in srgb, var(--prism-blue-primary-light) 4%, transparent);
+  --prism-primary-wash: color-mix(in srgb, var(--prism-blue-primary-light) 5%, transparent);
+  --prism-primary-selected-bg: color-mix(in srgb, var(--prism-blue-primary-light) 8%, transparent);
+  --prism-primary-ring: color-mix(in srgb, var(--prism-blue-primary-light) 40%, transparent);
+  --prism-primary-border-light: #c5cae8;
+  --prism-primary-border-hover: #9aa7df;
+  --prism-primary-border-subtle: color-mix(in srgb, var(--prism-blue-primary-light) 18%, transparent);
+  --prism-primary-border-accent: color-mix(in srgb, var(--prism-blue-primary-light) 22%, transparent);
+  --prism-primary-ring-subtle: color-mix(in srgb, var(--prism-blue-primary-light) 12%, transparent);
+  /* Button/link text — same indigo as filled buttons (not navy #1e3a8a) */
+  --prism-primary-dark: var(--prism-blue-primary-light);
+  --prism-primary-darker: var(--prism-blue-primary-light);
+
+  --primary: var(--prism-primary);
+  --primary-foreground: var(--fuse-white-500);
+  --accent: var(--prism-primary-muted);
+  --accent-foreground: var(--prism-primary);
+  --sidebar-primary: var(--prism-primary);
+  --prism-status-chip-progress-bg: #d0e6ff;
+  --prism-primary-avatar-bg: #e8f0fe;
+}
+
+html.theme-blue-dark {
+  /* Primary — blue-primary-dark for text/icons; fills use blue-primary-dark-fill (see bg override below) */
+  --prism-primary: var(--prism-blue-primary-dark);
+  --prism-primary-hover: var(--prism-blue-primary-dark-hover);
+  --prism-primary-muted: color-mix(in srgb, var(--prism-blue-primary-dark) 16%, transparent);
+  --prism-primary-subtle: color-mix(in srgb, var(--prism-blue-primary-dark) 12%, transparent);
+  --prism-primary-faint: color-mix(in srgb, var(--prism-blue-primary-dark) 10%, transparent);
+  --prism-primary-ring: color-mix(in srgb, var(--prism-blue-primary-dark) 45%, transparent);
+  --prism-primary-hover-faint: color-mix(in srgb, var(--prism-blue-primary-dark) 8%, transparent);
+  --prism-primary-wash: color-mix(in srgb, var(--prism-blue-primary-dark) 6%, transparent);
+  --prism-primary-selected-bg: color-mix(in srgb, var(--prism-blue-primary-dark) 16%, transparent);
+  --prism-primary-border-light: #C5CAE8;
+  --prism-primary-border-hover: var(--prism-blue-primary-dark-hover);
+  --prism-primary-border-subtle: color-mix(in srgb, var(--prism-blue-primary-dark) 18%, transparent);
+  --prism-primary-border-accent: color-mix(in srgb, var(--prism-blue-primary-dark) 22%, transparent);
+  --prism-primary-ring-subtle: color-mix(in srgb, var(--prism-blue-primary-dark) 12%, transparent);
+  --prism-primary-dark: #C5CAE8;
+  --prism-primary-darker: var(--prism-blue-primary-dark);
+
+  /* Primary-tinted timeline idle nodes */
+  --prism-primary-timeline-idle-text: #C5CAE8;
+  --prism-primary-timeline-idle-bg: color-mix(in srgb, var(--prism-blue-primary-dark) 18%, transparent);
+  --prism-primary-timeline-idle-border: color-mix(in srgb, var(--prism-blue-primary-dark) 40%, transparent);
+  --prism-primary-timeline-idle-hover: color-mix(in srgb, var(--prism-blue-primary-dark) 55%, transparent);
+
+  --primary: var(--prism-primary);
+  --primary-foreground: var(--fuse-white-500);
+  --accent: var(--prism-primary-muted);
+  --accent-foreground: #C5CAE8;
+  --sidebar-primary: var(--prism-primary);
+  --prism-status-chip-progress-bg: color-mix(in srgb, var(--prism-blue-primary-dark) 24%, transparent);
+  --prism-primary-avatar-bg: color-mix(in srgb, var(--prism-blue-primary-dark) 22%, transparent);
+}
+
+html.theme-purple-light {
+  --prism-primary: var(--prism-purple-primary-light);
+  /* Filled buttons / chips — same purple as brand primary (not default indigo from :root) */
+  --prism-primary-darker: var(--prism-purple-primary-light);
+  --prism-primary-hover: var(--prism-purple-primary-light-hover);
+  --prism-primary-muted: color-mix(in srgb, var(--prism-purple-primary-light) 8%, transparent);
+  --prism-primary-subtle: color-mix(in srgb, var(--prism-purple-primary-light) 7%, transparent);
+  --prism-primary-faint: color-mix(in srgb, var(--prism-purple-primary-light) 6%, transparent);
+  --prism-primary-hover-faint: color-mix(in srgb, var(--prism-purple-primary-light) 4%, transparent);
+  --prism-primary-ring: color-mix(in srgb, var(--prism-purple-primary-light) 40%, transparent);
+  --prism-primary-border-light: #e9d5ff;
+  --prism-primary-border-accent: color-mix(in srgb, var(--prism-purple-primary-light) 22%, transparent);
+  --prism-primary-border-hover: #d8b4fe;
+  --prism-primary-dark: #6b21a8;
+  --prism-status-chip-progress-bg: color-mix(
+    in srgb,
+    var(--prism-purple-primary-light) 14%,
+    var(--prism-surface)
+  );
+
+  --primary: var(--prism-primary);
+  --primary-foreground: var(--fuse-white-500);
+  --accent: var(--prism-primary-muted);
+  --accent-foreground: var(--prism-primary);
+  --sidebar-primary: var(--prism-primary);
+  /* Tailwind @theme bridges resolve on :root — override so bg-prism-primary-darker is purple, not indigo */
+  --color-prism-primary-darker: var(--prism-purple-primary-light);
+}
+
+html.theme-purple-dark {
+  --prism-primary: var(--prism-purple-primary-dark);
+  --prism-primary-hover: var(--prism-purple-primary-dark-hover);
+  --prism-primary-muted: color-mix(in srgb, var(--prism-purple-primary-dark) 16%, transparent);
+  --prism-primary-subtle: color-mix(in srgb, var(--prism-purple-primary-dark) 12%, transparent);
+  --prism-primary-faint: color-mix(in srgb, var(--prism-purple-primary-dark) 10%, transparent);
+  --prism-primary-ring: color-mix(in srgb, var(--prism-purple-primary-dark) 45%, transparent);
+  --prism-primary-hover-faint: color-mix(in srgb, var(--prism-purple-primary-dark) 8%, transparent);
+  --prism-primary-wash: color-mix(in srgb, var(--prism-purple-primary-dark) 6%, transparent);
+  --prism-primary-selected-bg: color-mix(in srgb, var(--prism-purple-primary-dark) 16%, transparent);
+  --prism-primary-border-light: #e9d5ff;
+  --prism-primary-border-hover: var(--prism-purple-primary-dark-hover);
+  --prism-primary-border-subtle: color-mix(in srgb, var(--prism-purple-primary-dark) 18%, transparent);
+  --prism-primary-border-accent: color-mix(in srgb, var(--prism-purple-primary-dark) 22%, transparent);
+  --prism-primary-ring-subtle: color-mix(in srgb, var(--prism-purple-primary-dark) 12%, transparent);
+  --prism-primary-dark: #e9d5ff;
+  --prism-primary-darker: var(--prism-purple-primary-dark);
+
+  /* Primary-tinted timeline idle nodes */
+  --prism-primary-timeline-idle-text: #e9d5ff;
+  --prism-primary-timeline-idle-bg: color-mix(in srgb, var(--prism-purple-primary-dark) 16%, transparent);
+  --prism-primary-timeline-idle-border: color-mix(in srgb, var(--prism-purple-primary-dark) 38%, transparent);
+  --prism-primary-timeline-idle-hover: color-mix(in srgb, var(--prism-purple-primary-dark) 52%, transparent);
+  --prism-status-chip-progress-bg: color-mix(in srgb, var(--prism-purple-primary-dark) 22%, transparent);
+  --prism-primary-avatar-bg: color-mix(in srgb, var(--prism-purple-primary-dark) 22%, transparent);
+
+  --primary: var(--prism-primary);
+  --primary-foreground: var(--fuse-white-500);
+  --accent: var(--prism-primary-muted);
+  --accent-foreground: #f3e8ff;
+  --sidebar-primary: var(--prism-primary);
+}
+
+html.theme-highcontrast-light {
+  --prism-primary: #0060df;
+  --prism-primary-darker: var(--prism-primary);
+  --prism-primary-hover: #0250bb;
+  --prism-primary-muted: rgba(0, 96, 223, 0.1);
+  --prism-primary-subtle: rgba(0, 96, 223, 0.08);
+  --prism-primary-faint: rgba(0, 96, 223, 0.06);
+  --prism-primary-ring: rgba(0, 96, 223, 0.5);
+  --prism-primary-dark: #003070;
+  --prism-brand-cyan: #6ce8fc;
+  --prism-surface: var(--fuse-white-500);
+  --prism-surface-muted: #fbfbfe;
+  --prism-text-primary: #15141a;
+  --prism-text-secondary: #42414d;
+  --prism-border: #15141a;
+
+  --background: var(--prism-page-bg);
+  --foreground: var(--prism-text-primary);
+  --card: var(--prism-surface);
+  --card-foreground: var(--prism-text-primary);
+  --primary: var(--prism-primary);
+  --primary-foreground: var(--fuse-white-500);
+  --muted: #f0f0f4;
+  --muted-foreground: #42414d;
+  --border: #15141a;
+  --accent: var(--prism-primary-muted);
+  --accent-foreground: var(--prism-primary);
+  --sidebar: #15141a;
+  --sidebar-foreground: #fbfbfe;
+  --sidebar-primary: var(--prism-brand-cyan);
+  --sidebar-primary-foreground: var(--prism-text-primary);
+  --sidebar-accent: #2b2a33;
+  --sidebar-border: #15141a;
+}
+
+html.theme-blue-dark,
+html.theme-purple-dark,
+html.theme-highcontrast-dark {
+  color-scheme: dark;
+
+  /* Shared dark shell — Blue Dark neutral charcoal (page, surfaces, sidebar) */
+  --prism-page-bg: #121212;
+  --prism-surface: #1e1e1e;
+  --prism-surface-muted: #272727;
+  --prism-text-primary: rgba(255, 255, 255, 0.87);
+  --prism-text-secondary: rgba(255, 255, 255, 0.7);
+  --prism-border: rgba(255, 255, 255, 0.12);
+  /* Deactivated controls — charcoal fill + slate disabled text (Prism tokens) */
+  --prism-bg-disabled: var(--prism-surface-muted);
+  --prism-text-disabled: #94a3b8;
+
+  --background: var(--prism-page-bg);
+  --foreground: var(--prism-text-primary);
+  --card: var(--prism-surface);
+  --card-foreground: var(--prism-text-primary);
+  --popover: var(--prism-surface);
+  --popover-foreground: var(--prism-text-primary);
+  --secondary: var(--prism-surface-muted);
+  --secondary-foreground: var(--prism-text-primary);
+  --muted: var(--prism-surface-muted);
+  --muted-foreground: var(--prism-text-secondary);
+  --border: var(--prism-border);
+  --input-background: var(--prism-surface-muted);
+  --sidebar: var(--prism-page-bg);
+  --sidebar-foreground: var(--fuse-white-500);
+  --sidebar-accent: var(--prism-surface);
+  --sidebar-border: rgba(255, 255, 255, 0.12);
+
+  /* Profile completion banner — fixed wash on dark card surface (same for blue / purple / HC dark) */
+  --prism-profile-banner-gradient: linear-gradient(
+    92.6583deg,
+    rgba(124, 117, 255, 0.16) 0.70097%,
+    #1e1e1e 55.124%,
+    rgba(124, 117, 255, 0.12) 98.568%
+  );
+
+  /* Product placement banner — brand pink + primary radial wash on dark card surface */
+  --prism-product-placement-banner-bg: radial-gradient(
+      ellipse 140% 120% at -15% 40%,
+      rgba(227, 28, 121, 0.2) 0%,
+      transparent 58%
+    ),
+    radial-gradient(ellipse 100% 120% at 105% 75%, var(--prism-primary-muted) 0%, transparent 52%),
+    linear-gradient(90deg, var(--prism-surface) 0%, var(--prism-surface) 100%);
+
+  --prism-product-placement-exxat-one-bg: radial-gradient(
+      ellipse 120% 100% at 0% 50%,
+      rgba(238, 223, 196, 0.28) 0%,
+      transparent 62%
+    ),
+    radial-gradient(ellipse 100% 90% at 100% 40%, rgba(227, 28, 121, 0.16) 0%, transparent 58%),
+    linear-gradient(90deg, var(--prism-surface) 0%, var(--prism-surface) 100%);
+
+  --prism-product-placement-exam-bg: var(--prism-product-placement-banner-bg);
+
+  /* Onsite learning promo card — vivid pink, primary, and amber glow on dark surface */
+  --prism-onsite-learning-promo-bg: radial-gradient(
+      ellipse 140% 100% at 10% 8%,
+      rgba(227, 28, 121, 0.3) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 120% 95% at 92% 88%,
+      rgba(245, 158, 11, 0.24) 0%,
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 80% 70% at 65% 35%,
+      var(--prism-primary-muted) 0%,
+      transparent 52%
+    ),
+    linear-gradient(
+      213.142deg,
+      rgba(227, 28, 121, 0.14) 30%,
+      var(--prism-surface-muted) 58%,
+      var(--prism-surface) 100%
+    );
+
+  /* Brand marks — lighten slate wordmark for AA contrast on dark surfaces */
+  --prism-brand-slate: #adb9ca;
+
+  /* Status success — opaque Prism greens for AA gantt fills + light text */
+  --prism-status-success-fg: #86efac;
+  --prism-status-success-solid: #15803d;  /* green-700, 5:1 contrast with white */
+  --prism-status-success-bg: rgba(34, 197, 94, 0.14);
+  --prism-status-success-bg-strong: #166534; /* Prism light success-solid — AA with #86efac / white */
+  --prism-status-success-border: rgba(34, 197, 94, 0.36);
+  --prism-status-success-border-hover: rgba(34, 197, 94, 0.52);
+  --prism-status-success-ring: #22c55e;
+  --prism-status-success-shadow: rgba(34, 197, 94, 0.2);
+  --prism-status-success-icon: #4ade80;
+  --prism-status-success-avatar-bg: rgba(34, 197, 94, 0.14);
+  --prism-status-milestone-complete-bg: rgba(34, 197, 94, 0.14);
+  --prism-status-milestone-complete-fg: #86efac;
+
+  /* Status danger — muted washes for gantt (match ongoing accent); fill token stays solid for CTAs */
+  --prism-status-danger-fg: #fca5a5;
+  --prism-status-danger-fg-muted: color-mix(in srgb, var(--prism-red-primary) 72%, white);
+  --prism-status-danger-accent: var(--prism-red-primary);
+  --prism-status-danger-bright: var(--prism-red-primary);
+  --prism-status-danger-bg: color-mix(in srgb, var(--prism-red-primary) 28%, transparent);
+  --prism-status-danger-bg-soft: color-mix(in srgb, var(--prism-red-primary) 16%, transparent);
+  --prism-status-danger-bg-pale: color-mix(in srgb, var(--prism-red-primary) 10%, transparent);
+  --prism-status-danger-border: color-mix(in srgb, var(--prism-red-primary) 36%, transparent);
+  --prism-status-danger-border-soft: color-mix(in srgb, var(--prism-red-primary) 28%, transparent);
+  --prism-status-danger-ring: var(--prism-red-primary);
+  --prism-status-danger-icon: var(--prism-red-primary);
+  --destructive: var(--prism-status-danger-fill);
+
+  /* Status amber — muted wash when idle; solid amber-700 when selected (AA with white) */
+  --prism-status-amber-fg: #fde68a;
+  --prism-status-amber-solid: #b45309; /* Prism amber-700 — solid selected fill, 7.1:1 with white */
+  --prism-status-amber-bg: color-mix(in srgb, #f59e0b 16%, transparent);
+  --prism-status-amber-bg-hover: color-mix(in srgb, #f59e0b 22%, transparent);
+  --prism-status-amber-ring: #fbbf24;
+  --prism-status-amber-border: rgba(251, 191, 36, 0.4);
+  --prism-status-milestone-warning-bg: rgba(245, 158, 11, 0.13);
+  --prism-status-milestone-warning-fg: #fde68a;
+
+  /* Status warning (upcoming / unselected grey) — soft fill + AA text/ring */
+  --prism-status-warning-fg: #e2e8f0;
+  --prism-status-warning-bg: #334155;
+  --prism-status-warning-border: #94a3b8;
+  --prism-status-warning-border-hover: #cbd5e1;
+  --prism-status-warning-solid: #475569;
+  --prism-status-warning-solid-border: #64748b;
+  --prism-status-warning-shadow: rgba(148, 163, 184, 0.28);
+
+  /* Status pause */
+  --prism-status-pause-fg: #fde68a;
+  --prism-status-pause-border: rgba(253, 230, 138, 0.45);
+
+  /* Status chip backgrounds (neutral — palette tints live in theme-* blocks) */
+  --prism-status-chip-neutral-bg: rgba(234, 179, 8, 0.16);
+  --prism-status-chip-neutral-ring: rgba(234, 179, 8, 0.42);
+  --prism-status-chip-count-bg: rgba(255, 255, 255, 0.13);
+
+  /* Connector / meta */
+  --prism-status-connector: rgba(168, 197, 232, 0.45);
+  --prism-status-meta-muted: #8fa4c4;
+  --prism-status-dot-muted: rgba(176, 184, 196, 0.45);
+  --prism-status-neutral-solid: #475569;  /* slate-600, 7.3:1 contrast with white */
+
+  /* Status slate — #587394 gives white text 4.7:1 and 3.1:1 badge/card contrast */
+  --prism-status-slate: #587394;
+  --prism-status-slate-bg: rgba(93, 119, 154, 0.2);
+  --prism-status-slate-fg: #a8c4dc;
+
+  /* Misc surface tokens */
+  --prism-border-light: rgba(255, 255, 255, 0.08);
+
+  /* Placement washes — lightened −10 opacity points on dark surfaces */
+  --prism-placement-wash-danger: color-mix(in srgb, var(--card) 94%, var(--prism-status-danger-accent));
+  --prism-placement-wash-success: rgba(34, 197, 94, 0.04);
+  --prism-placement-wash-amber-from: rgba(245, 158, 11, 0.05);
+  --prism-placement-wash-amber-via: rgba(245, 158, 11, 0.03);
+  --prism-placement-wash-amber-pause-from: rgba(245, 158, 11, 0.03);
+  --prism-placement-wash-amber-pause-via: rgba(245, 158, 11, 0.02);
+  --prism-placement-wash-amber-paused-from: rgba(251, 191, 36, 0.04);
+  --prism-placement-wash-amber-paused-via: rgba(251, 191, 36, 0.02);
+  --prism-placement-wash-primary-from: color-mix(in srgb, var(--prism-primary) 4%, transparent);
+  --prism-placement-wash-primary-via: color-mix(in srgb, var(--prism-primary) 2%, transparent);
+  --prism-placement-wash-primary-soft: color-mix(in srgb, var(--prism-primary) 3%, transparent);
+  --prism-placement-wash-muted-from: color-mix(in srgb, var(--muted) 35%, var(--card));
+  --prism-placement-wash-muted-via: color-mix(in srgb, var(--muted) 20%, var(--card));
+}
+
+html.theme-blue-light,
+html.theme-purple-light,
+html.theme-highcontrast-light {
+  color-scheme: light;
+  --prism-page-bg: #F5F7FA;
+  --background: var(--prism-page-bg);
+  --border: var(--prism-border);
+
+  /* Danger / red — unified to #BB1E1F (light themes) */
+  --prism-status-danger-fg: #BB1E1F;
+  --prism-status-danger-fg-muted: #9A1819;
+  --prism-status-danger-accent: #BB1E1F;
+  --prism-status-danger-bright: #BB1E1F;
+  --prism-status-danger-bg: rgba(187, 30, 31, 0.18);
+  --prism-status-danger-bg-soft: rgba(187, 30, 31, 0.12);
+  --prism-status-danger-bg-pale: rgba(187, 30, 31, 0.08);
+  --prism-status-danger-border: rgba(187, 30, 31, 0.45);
+  --prism-status-danger-border-soft: rgba(187, 30, 31, 0.3);
+  --prism-status-danger-ring: #BB1E1F;
+  --prism-status-danger-icon: #BB1E1F;
+  --destructive: var(--prism-status-danger-fill);
+}
+
+html.theme-highcontrast-dark {
+  --prism-primary: #6ce8fc;
+  /* High-visibility yellow hover — solid fill for icon buttons, rows, and filled controls */
+  --prism-primary-hover: #ffff66;
+  --prism-primary-hover-foreground: #15141a;
+  --prism-primary-hover-faint: #ffff66;
+  --prism-primary-muted: rgba(108, 232, 252, 0.14);
+  --prism-primary-subtle: rgba(108, 232, 252, 0.1);
+  --prism-primary-faint: rgba(108, 232, 252, 0.08);
+  --prism-primary-ring: rgba(108, 232, 252, 0.55);
+  --prism-primary-dark: #6ce8fc;
+  /* Filled buttons / chips — brand cyan (#6ce8fc), not default indigo from :root */
+  --prism-primary-darker: #6ce8fc;
+  --prism-primary-wash: rgba(108, 232, 252, 0.06);
+  --prism-primary-selected-bg: rgba(108, 232, 252, 0.16);
+  --prism-primary-ring-subtle: rgba(108, 232, 252, 0.12);
+  --prism-primary-border-light: rgba(108, 232, 252, 0.45);
+  --prism-primary-border-hover: #80ebff;
+  --prism-primary-border-subtle: rgba(108, 232, 252, 0.18);
+  --prism-primary-border-accent: rgba(108, 232, 252, 0.22);
+  --prism-brand-cyan: #6ce8fc;
+  /* Tailwind @theme bridges resolve on :root — override so bg-prism-primary-darker is cyan, not indigo */
+  --color-prism-primary: #6ce8fc;
+  --color-prism-primary-dark: #6ce8fc;
+  --color-prism-primary-darker: #6ce8fc;
+  --color-prism-primary-hover: #ffff66;
+  --color-prism-primary-hover-foreground: #15141a;
+  --color-prism-primary-hover-faint: #ffff66;
+
+  /* Primary-tinted timeline idle nodes */
+  --prism-primary-timeline-idle-text: #6ce8fc;
+  --prism-primary-timeline-idle-bg: rgba(108, 232, 252, 0.14);
+  --prism-primary-timeline-idle-border: rgba(108, 232, 252, 0.38);
+  --prism-primary-timeline-idle-hover: rgba(108, 232, 252, 0.52);
+  --prism-status-chip-progress-bg: rgba(108, 232, 252, 0.18);
+  --prism-primary-avatar-bg: rgba(108, 232, 252, 0.16);
+
+  /* High-contrast overrides — shell stays neutral; borders/text stay maximum contrast */
+  --prism-text-primary: #fbfbfe;
+  --prism-text-secondary: #cfcfd8;
+  --prism-border: #fbfbfe;
+
+  --foreground: var(--prism-text-primary);
+  --card-foreground: var(--prism-text-primary);
+  --popover-foreground: var(--prism-text-primary);
+  --primary: var(--prism-primary);
+  --primary-foreground: #15141a;
+  --muted: #2b2a33;
+  --muted-foreground: #cfcfd8;
+  --border: #fbfbfe;
+  --accent: var(--prism-primary-muted);
+  --accent-foreground: var(--prism-primary);
+  --sidebar-foreground: #fbfbfe;
+  --sidebar-primary: var(--prism-primary);
+  --sidebar-accent: var(--prism-surface-muted);
+  --sidebar-border: #fbfbfe;
+}
+
+/* Purple light — filled primary controls (Add Patient Log, View All Forms, chips) */
+html.theme-purple-light :is(.bg-prism-primary-darker) {
+  background-color: var(--prism-purple-primary-light);
+}
+
+html.theme-purple-light :is(.hover\:bg-prism-primary-darker\/90):hover {
+  background-color: color-mix(in srgb, var(--prism-purple-primary-light) 90%, transparent);
+}
+
+/* Blue dark — filled primary uses blue-primary-dark-fill (AA with white);
+   --prism-primary-darker stays blue-primary-dark for text/borders on dark surfaces */
+html.theme-blue-dark :is(.bg-prism-primary-darker) {
+  background-color: var(--prism-blue-primary-dark-fill);
+}
+
+html.theme-blue-dark :is(.hover\:bg-prism-primary-darker\/90):hover {
+  background-color: color-mix(in srgb, var(--prism-blue-primary-dark-fill-hover) 90%, transparent);
+}
+
+/* Purple dark — filled primary uses purple-primary-dark-fill (#9333ea, AA with white);
+   --prism-primary-darker stays purple-primary-dark for text/borders on dark surfaces */
+html.theme-purple-dark :is(.bg-prism-primary-darker) {
+  background-color: var(--prism-purple-primary-dark-fill);
+}
+
+html.theme-purple-dark :is(.hover\:bg-prism-primary-darker\/90):hover {
+  background-color: color-mix(in srgb, var(--prism-purple-primary-dark-fill-hover) 90%, transparent);
+}
+
+/* HC dark — filled primary controls (Add Patient Log, View All Forms, chips) */
+html.theme-highcontrast-dark :is(.bg-prism-primary-darker) {
+  background-color: var(--prism-brand-cyan);
+}
+
+html.theme-highcontrast-dark :is(.hover\:bg-prism-primary-darker\/90):hover {
+  background-color: color-mix(in srgb, var(--prism-brand-cyan) 90%, transparent);
+}
+
+/* Need Attention / Announcement rows — solid yellow fill + dark text on hover (HC dark only) */
+html.theme-highcontrast-dark .need-attention-row,
+html.theme-highcontrast-dark .announcement-row {
+  background-color: transparent !important;
+}
+
+html.theme-highcontrast-dark .need-attention-row,
+html.theme-highcontrast-dark .announcement-row {
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+html.theme-highcontrast-dark .need-attention-row:hover,
+html.theme-highcontrast-dark .announcement-row:hover {
+  background-color: var(--prism-primary-hover) !important;
+  box-shadow: none;
+}
+
+html.theme-highcontrast-dark .need-attention-row:hover :is(
+    .need-attention-row__title,
+    .need-attention-row__meta,
+    .need-attention-row__meta *,
+    .need-attention-row__due,
+    .need-attention-row__due *,
+    .need-attention-row__chevron,
+    .need-attention-row__icon
+  ),
+html.theme-highcontrast-dark .announcement-row:hover :is(
+    .announcement-row__title,
+    .announcement-row__meta,
+    .announcement-row__date
+  ) {
+  color: var(--prism-primary-hover-foreground) !important;
+}
+
+/* High contrast — flat placement surfaces (no gradient washes) */
+html.theme-highcontrast-light .placement-wash,
+html.theme-highcontrast-dark .placement-wash {
+  background-image: none;
+  background-color: var(--card);
+}
+

@@ -1,0 +1,18 @@
+---
+description: Use Prism color tokens for every color
+alwaysApply: true
+---
+
+# Prism colors
+
+Source: https://github.com/Exxat-Design/PRISM-tokens (branch main), folder tokens. That repo is the single source of truth for Prism colors.
+
+- Do not edit the copied token files here. Change colors in the source repo, then copy the new files over.
+- Never hardcode hex, rgb or named colors in components. Use Prism tokens.
+- Product UI: use --prism-* tokens or their Tailwind classes (bg-prism-surface, text-prism-primary).
+- Generic UI primitives (shadcn): use role classes (bg-primary, bg-card, text-muted-foreground, border-border).
+- Filled primary buttons: bg-prism-primary-darker with text-primary-foreground. Theme rules keep the label at AA.
+- Status: pair a -bg token with its -fg token (success, danger, amber, warning). Solid fills use -solid with white text.
+- Row, chip and menu hovers: bg-prism-primary-hover-faint.
+- Themes are classes on <html>: theme-blue-light, theme-blue-dark, theme-purple-light, theme-purple-dark, theme-highcontrast-light, theme-highcontrast-dark. Add "dark" for dark themes.
+- Every text pair must reach 4.5:1, and icons or borders 3:1, in all six themes.
